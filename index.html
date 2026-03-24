@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Registro Oficial de Certificación Vehicular</title>
+  <title>Registro Oficial de Certificación</title>
 
   <style>
     body {
@@ -16,7 +16,7 @@
       background: white;
       padding: 25px;
       border-radius: 10px;
-      max-width: 500px;
+      max-width: 600px;
       margin: auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -39,43 +39,50 @@
     hr {
       margin: 20px 0;
     }
+
+    p {
+      text-align: left;
+      margin: 5px 0;
+    }
   </style>
 </head>
 
 <body>
 
 <div class="card">
-  <h1>🚛 Registro Oficial</h1>
+  <h1>📄 Registro Oficial</h1>
   <div id="info"></div>
 </div>
 
 <script>
 const data = {
-  "001": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "002": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "003": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "004": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "005": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "006": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "007": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "008": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "009": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "010": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "011": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "012": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "013": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "014": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "015": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "016": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "017": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "018": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "019": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "020": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "021": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "022": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "023": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "024": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
-  "025": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""}
+  "001": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"VR TRANSPORTSOLUTIONS,SOCIEDAD ANONIMA", telefonoImplementadora:"4858-2580", regSolicitante:"SLV-150-1", empresaSolicitante:"ISA TRANSPORT,SOCIEDAD ANONIMA", codigoEmitido:"STCPC-SLV8056/0003/200320 26/C0277BQQ/SL V-805617208", placa:"C0277BQQ", fecha:"2026-03-20"},
+  "002": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "003": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "004": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "005": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "006": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "007": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "008": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "009": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "010": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "011": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "012": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "013": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "014": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "015": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "016": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "017": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "018": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "019": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "020": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "021": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "022": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "023": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "024": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "025": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "026": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""},
+  "027": {regImplementadora:"DTPR-SLV-0018-2026", empresaImplementadora:"", telefonoImplementadora:"", regSolicitante:"", empresaSolicitante:"", codigoEmitido:"", placa:"", fecha:""}
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -84,20 +91,26 @@ const id = params.get("id");
 if (data[id]) {
   const c = data[id];
   document.getElementById("info").innerHTML = `
-    <p><b>Placa:</b> ${c.placa}</p>
-    <p><b>Marca:</b> ${c.marca}</p>
-    <p><b>Modelo:</b> ${c.modelo}</p>
-    <p><b>VIN:</b> ${c.vin}</p>
-    <p><b>Motor:</b> ${c.motor}</p>
-    <p><b>Código SLV:</b> ${c.slv}</p>
+    <p><b>No. Registro Implementadora:</b> ${c.regImplementadora}</p>
+    <p><b>Empresa Implementadora:</b> ${c.empresaImplementadora}</p>
+    <p><b>Teléfono Implementadora:</b> ${c.telefonoImplementadora}</p>
+
     <hr>
-    <p><b>Certificador:</b> ${c.certificador}</p>
-    <p><b>Teléfono:</b> ${c.telefono}</p>
+
+    <p><b>No. Registro Solicitante:</b> ${c.regSolicitante}</p>
+    <p><b>Empresa Solicitante:</b> ${c.empresaSolicitante}</p>
+
+    <hr>
+
+    <p><b>No. Código Emitido:</b> ${c.codigoEmitido}</p>
+    <p><b>No. de Placa:</b> ${c.placa}</p>
+    <p><b>Fecha de Creación:</b> ${c.fecha}</p>
+
     <div class="valid">✔ CERTIFICADO VÁLIDO</div>
   `;
 } else {
   document.getElementById("info").innerHTML =
-    "<div class='invalid'>❌ CAMIÓN NO ENCONTRADO</div>";
+    "<div class='invalid'>❌ REGISTRO NO ENCONTRADO</div>";
 }
 </script>
 
