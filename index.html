@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro de Camión</title>
+  <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial; text-align: center;">
+
+<h1>🚛 Registro Oficial de Camión</h1>
+
+<div id="info"></div>
+
+<script>
+const data = {
+  "001": {
+    placa: "P123ABC",
+    marca: "Toyota",
+    modelo: "Hilux 2022",
+    vin: "123456",
+    motor: "2GD",
+    slv: "SLV-001",
+    certificador: "Juan Pérez",
+    telefono: "5555-5555"
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if (data[id]) {
+  const c = data[id];
+  document.getElementById("info").innerHTML = `
+    <p><b>Placa:</b> ${c.placa}</p>
+    <p><b>Marca:</b> ${c.marca}</p>
+    <p><b>Modelo:</b> ${c.modelo}</p>
+    <p><b>VIN:</b> ${c.vin}</p>
+    <p><b>Motor:</b> ${c.motor}</p>
+    <p><b>SLV:</b> ${c.slv}</p>
+    <hr>
+    <p><b>Certificador:</b> ${c.certificador}</p>
+    <p><b>Tel:</b> ${c.telefono}</p>
+    <p style="color:green;"><b>✔ Certificado válido</b></p>
+  `;
+} else {
+  document.getElementById("info").innerHTML = "<p>❌ Camión no encontrado</p>";
+}
+</script>
+
+</body>
+</html>
