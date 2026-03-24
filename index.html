@@ -1,27 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Registro de Camión</title>
   <meta charset="UTF-8">
+  <title>Registro Oficial de Certificación Vehicular</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .valid {
+      color: green;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .invalid {
+      color: red;
+      font-weight: bold;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center;">
 
-<h1>🚛 Registro Oficial de Camión</h1>
+<body>
 
-<div id="info"></div>
+<div class="card">
+  <h1>🚛 Registro Oficial</h1>
+  <div id="info"></div>
+</div>
 
 <script>
 const data = {
-  "001": {
-    placa: "P123ABC",
-    marca: "Toyota",
-    modelo: "Hilux 2022",
-    vin: "123456",
-    motor: "2GD",
-    slv: "SLV-001",
-    certificador: "Juan Pérez",
-    telefono: "5555-5555"
-  }
+  "001": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "002": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "003": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "004": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "005": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "006": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "007": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "008": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "009": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "010": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "011": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "012": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "013": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "014": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "015": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "016": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "017": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "018": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "019": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "020": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "021": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "022": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "023": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "024": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""},
+  "025": {placa:"", marca:"", modelo:"", vin:"", motor:"", slv:"", certificador:"", telefono:""}
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -35,14 +89,15 @@ if (data[id]) {
     <p><b>Modelo:</b> ${c.modelo}</p>
     <p><b>VIN:</b> ${c.vin}</p>
     <p><b>Motor:</b> ${c.motor}</p>
-    <p><b>SLV:</b> ${c.slv}</p>
+    <p><b>Código SLV:</b> ${c.slv}</p>
     <hr>
     <p><b>Certificador:</b> ${c.certificador}</p>
-    <p><b>Tel:</b> ${c.telefono}</p>
-    <p style="color:green;"><b>✔ Certificado válido</b></p>
+    <p><b>Teléfono:</b> ${c.telefono}</p>
+    <div class="valid">✔ CERTIFICADO VÁLIDO</div>
   `;
 } else {
-  document.getElementById("info").innerHTML = "<p>❌ Camión no encontrado</p>";
+  document.getElementById("info").innerHTML =
+    "<div class='invalid'>❌ CAMIÓN NO ENCONTRADO</div>";
 }
 </script>
 
